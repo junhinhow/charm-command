@@ -156,9 +156,10 @@ items.
   sorted by title.
 - **No `charm-fuzzy`.** The matcher is deliberately self-contained. It does
   not support typo tolerance or match highlighting.
-- **Accents.** Precomposed Latin-1 and Latin Extended-A letters are folded to
-  their ASCII base. Combining marks are not normalized; a query typed with
-  decomposed accents may not match a precomposed title.
+- **Accents.** Common precomposed Latin accented letters are folded to their
+  ASCII base (for example `Ação` → `acao`). Combining marks are not
+  normalized; a query typed with decomposed accents may not match a
+  precomposed title.
 - **Groups.** A group header is printed whenever the group differs from the
   previous visible command. Because results are sorted by score and title,
   groups may interleave.

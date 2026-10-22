@@ -158,9 +158,10 @@ item.
   ordenados por título.
 - **Sem `charm-fuzzy`.** O matcher é deliberadamente autocontido. Não há
   tolerância a erros de digitação nem destaque dos trechos casados.
-- **Acentos.** Letras latinas precompostas de Latin-1 e Latin Extended-A são
-  reduzidas à base ASCII. Marcas combinantes não são normalizadas; uma busca
-  digitada com acentos decompostos pode não casar com um título precomposto.
+- **Acentos.** Letras latinas acentuadas precompostas comuns são reduzidas à
+  base ASCII (por exemplo `Ação` → `acao`). Marcas combinantes não são
+  normalizadas; uma busca digitada com acentos decompostos pode não casar com
+  um título precomposto.
 - **Grupos.** Um cabeçalho de grupo é impresso sempre que o grupo difere do
   comando visível anterior. Como os resultados são ordenados por score e
   título, grupos podem se intercalar.

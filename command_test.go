@@ -176,6 +176,14 @@ func TestFilterCaseAndAccent(t *testing.T) {
 	}
 }
 
+// TestFoldString cobre a redução de acentos e o mapeamento de letras latinas
+// comuns.
+func TestFoldString(t *testing.T) {
+	if got := foldString("AÇÃO Café Æsop"); got != "acao cafe asop" {
+		t.Fatalf("foldString = %q", got)
+	}
+}
+
 // TestFilterOrdering verifica score e desempate por título.
 func TestFilterOrdering(t *testing.T) {
 	p := New(

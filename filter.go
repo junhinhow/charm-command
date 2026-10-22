@@ -188,11 +188,11 @@ func foldString(s string) string {
 	return strings.Map(func(r rune) rune {
 		r = unicode.ToLower(r)
 		switch r {
-		case 'à', 'á', 'â', 'ã', 'ä', 'å', 'ā', 'ă', 'ą':
+		case 'à', 'á', 'â', 'ã', 'ä', 'å', 'ā', 'ă', 'ą', 'æ':
 			return 'a'
 		case 'ç', 'ć', 'ĉ', 'ċ', 'č':
 			return 'c'
-		case 'ď', 'đ':
+		case 'ď', 'đ', 'ð':
 			return 'd'
 		case 'è', 'é', 'ê', 'ë', 'ē', 'ĕ', 'ė', 'ę', 'ě':
 			return 'e'
@@ -210,13 +210,13 @@ func foldString(s string) string {
 			return 'l'
 		case 'ñ', 'ń', 'ņ', 'ň':
 			return 'n'
-		case 'ò', 'ó', 'ô', 'õ', 'ö', 'ø', 'ō', 'ŏ', 'ő':
+		case 'ò', 'ó', 'ô', 'õ', 'ö', 'ø', 'ō', 'ŏ', 'ő', 'œ':
 			return 'o'
 		case 'ŕ', 'ŗ', 'ř':
 			return 'r'
-		case 'ś', 'ŝ', 'ş', 'š':
+		case 'ś', 'ŝ', 'ş', 'š', 'ß':
 			return 's'
-		case 'ţ', 'ť', 'ŧ':
+		case 'ţ', 'ť', 'ŧ', 'þ':
 			return 't'
 		case 'ù', 'ú', 'û', 'ü', 'ũ', 'ū', 'ŭ', 'ů', 'ű', 'ų':
 			return 'u'
