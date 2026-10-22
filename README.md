@@ -52,7 +52,9 @@ func newModel() model {
 			ID:    "quit",
 			Title: "Quit",
 			Group: "App",
-			Run:   tea.Quit,
+			Run: func() tea.Cmd {
+				return tea.Quit
+			},
 		},
 	)
 	p.SetSize(80, 24) // replace with the terminal size

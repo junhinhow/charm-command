@@ -50,7 +50,9 @@ type Command struct {
 	Group string
 	// Keys são os atalhos exibidos, por exemplo []string{"ctrl+s"}.
 	Keys []string
-	// Run é a ação executada no enter; pode ser nil.
+	// Run é a ação executada no enter; pode ser nil. Ela devolve um comando
+	// do Bubble Tea, que é executado pela aplicação. Para encerrar o
+	// programa, use func() tea.Cmd { return tea.Quit }.
 	Run func() tea.Cmd
 }
 
